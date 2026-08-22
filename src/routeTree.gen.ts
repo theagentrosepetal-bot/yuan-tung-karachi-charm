@@ -15,8 +15,10 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as MenuRouteImport } from './routes/menu'
 import { Route as PopularDishesRouteImport } from './routes/popular-dishes'
+import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as ReservationsRouteImport } from './routes/reservations'
 import { Route as ReviewsRouteImport } from './routes/reviews'
+import { Route as TermsRouteImport } from './routes/terms'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -48,6 +50,11 @@ const PopularDishesRoute = PopularDishesRouteImport.update({
   path: '/popular-dishes',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ReservationsRoute = ReservationsRouteImport.update({
   id: '/reservations',
   path: '/reservations',
@@ -58,6 +65,11 @@ const ReviewsRoute = ReviewsRouteImport.update({
   path: '/reviews',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -66,8 +78,10 @@ export interface FileRoutesByFullPath {
   '/gallery': typeof GalleryRoute
   '/menu': typeof MenuRoute
   '/popular-dishes': typeof PopularDishesRoute
+  '/privacy': typeof PrivacyRoute
   '/reservations': typeof ReservationsRoute
   '/reviews': typeof ReviewsRoute
+  '/terms': typeof TermsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -76,8 +90,10 @@ export interface FileRoutesByTo {
   '/gallery': typeof GalleryRoute
   '/menu': typeof MenuRoute
   '/popular-dishes': typeof PopularDishesRoute
+  '/privacy': typeof PrivacyRoute
   '/reservations': typeof ReservationsRoute
   '/reviews': typeof ReviewsRoute
+  '/terms': typeof TermsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -87,8 +103,10 @@ export interface FileRoutesById {
   '/gallery': typeof GalleryRoute
   '/menu': typeof MenuRoute
   '/popular-dishes': typeof PopularDishesRoute
+  '/privacy': typeof PrivacyRoute
   '/reservations': typeof ReservationsRoute
   '/reviews': typeof ReviewsRoute
+  '/terms': typeof TermsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -99,8 +117,10 @@ export interface FileRouteTypes {
     | '/gallery'
     | '/menu'
     | '/popular-dishes'
+    | '/privacy'
     | '/reservations'
     | '/reviews'
+    | '/terms'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -109,8 +129,10 @@ export interface FileRouteTypes {
     | '/gallery'
     | '/menu'
     | '/popular-dishes'
+    | '/privacy'
     | '/reservations'
     | '/reviews'
+    | '/terms'
   id:
     | '__root__'
     | '/'
@@ -119,8 +141,10 @@ export interface FileRouteTypes {
     | '/gallery'
     | '/menu'
     | '/popular-dishes'
+    | '/privacy'
     | '/reservations'
     | '/reviews'
+    | '/terms'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -130,8 +154,10 @@ export interface RootRouteChildren {
   GalleryRoute: typeof GalleryRoute
   MenuRoute: typeof MenuRoute
   PopularDishesRoute: typeof PopularDishesRoute
+  PrivacyRoute: typeof PrivacyRoute
   ReservationsRoute: typeof ReservationsRoute
   ReviewsRoute: typeof ReviewsRoute
+  TermsRoute: typeof TermsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -178,6 +204,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PopularDishesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/reservations': {
       id: '/reservations'
       path: '/reservations'
@@ -192,6 +225,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ReviewsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -202,8 +242,10 @@ const rootRouteChildren: RootRouteChildren = {
   GalleryRoute: GalleryRoute,
   MenuRoute: MenuRoute,
   PopularDishesRoute: PopularDishesRoute,
+  PrivacyRoute: PrivacyRoute,
   ReservationsRoute: ReservationsRoute,
   ReviewsRoute: ReviewsRoute,
+  TermsRoute: TermsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
