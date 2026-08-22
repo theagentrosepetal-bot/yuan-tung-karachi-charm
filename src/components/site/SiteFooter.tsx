@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Facebook, Instagram, MapPin, Phone } from "lucide-react";
 
+import { OpeningHours } from "@/components/site/OpeningHours";
 import { restaurant } from "@/data/restaurant";
 
 export function SiteFooter() {

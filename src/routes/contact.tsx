@@ -88,6 +88,10 @@ function ContactPage() {
               </li>
             ))}
           </ul>
+
+          <div className="mt-8">
+            <OpeningHours />
+          </div>
         </div>
 
         <div>
