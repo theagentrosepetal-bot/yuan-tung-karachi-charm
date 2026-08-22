@@ -25,7 +25,9 @@ export function SiteFooter() {
               </a>
             </p>
           </address>
-          <p className="mt-4 text-xs text-sidebar-foreground/60">{restaurant.hoursNote}</p>
+          <div className="mt-4">
+            <OpeningHours variant="compact" />
+          </div>
         </div>
 
         <nav aria-label="Footer">
