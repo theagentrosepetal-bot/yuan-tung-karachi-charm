@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CalendarCheck, MapPin, Navigation, Phone, ShoppingBag, Truck, Utensils } from "lucide-react";
 
+import { OpeningHours } from "@/components/site/OpeningHours";
 import { PageHeader } from "@/components/site/PageHeader";
 import { Button } from "@/components/ui/button";
 import { restaurant } from "@/data/restaurant";
@@ -60,8 +61,7 @@ function ContactPage() {
               </a>
             </p>
           </address>
-          <p className="mt-4 text-sm text-muted-foreground">{restaurant.hoursNote}</p>
-          <p className="mt-1 text-sm text-muted-foreground">{restaurant.priceRange}</p>
+          <p className="mt-4 text-sm text-muted-foreground">{restaurant.priceRange}</p>
 
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild size="lg">
@@ -88,6 +88,10 @@ function ContactPage() {
               </li>
             ))}
           </ul>
+
+          <div className="mt-8">
+            <OpeningHours />
+          </div>
         </div>
 
         <div>
