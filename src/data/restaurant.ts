@@ -17,6 +17,15 @@ export const restaurant = {
     "https://www.google.com/maps/search/?api=1&query=Yuan+Tung+Restaurant+173+Tariq+Rd+Block+2+PECHS+Karachi",
   directionsUrl:
     "https://www.google.com/maps/dir/?api=1&destination=Yuan+Tung+Restaurant+173+Tariq+Rd+Block+2+PECHS+Karachi",
-  // Opening hours were not confirmed — leave editable rather than inventing them.
-  hoursNote: "Opening hours vary — please call to confirm before visiting.",
+  // Editable opening hours — every day, lunch and dinner service.
+  hoursNote: "Open daily for lunch and dinner — please call to confirm on public holidays.",
+  hours: [
+    { day: "Monday", lunch: "12:00 PM – 3:00 PM", dinner: "7:00 PM – 11:00 PM" },
+    { day: "Tuesday", lunch: "12:00 PM – 3:00 PM", dinner: "7:00 PM – 11:00 PM" },
+    { day: "Wednesday", lunch: "12:00 PM – 3:00 PM", dinner: "7:00 PM – 11:00 PM" },
+    { day: "Thursday", lunch: "12:00 PM – 3:00 PM", dinner: "7:00 PM – 11:00 PM" },
+    { day: "Friday", lunch: "12:00 PM – 3:00 PM", dinner: "7:00 PM – 11:00 PM" },
+    { day: "Saturday", lunch: "12:00 PM – 3:00 PM", dinner: "7:00 PM – 11:00 PM" },
+    { day: "Sunday", lunch: "12:00 PM – 3:00 PM", dinner: "7:00 PM – 11:00 PM" },
+  ] as const,
 } as const;
