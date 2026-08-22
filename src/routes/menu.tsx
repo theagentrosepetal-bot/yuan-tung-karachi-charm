@@ -29,8 +29,9 @@ export const Route = createFileRoute("/menu")({
 });
 
 function MenuPage() {
-  const [active, setActive] = useState<string>(menu[0].id);
-  const category = menu.find((c) => c.id === active) ?? menu[0];
+  const first = menu[0]!;
+  const [active, setActive] = useState<string>(first.id);
+  const category = menu.find((c) => c.id === active) ?? first;
 
   return (
     <>
