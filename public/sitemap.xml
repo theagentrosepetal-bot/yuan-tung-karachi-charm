@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: set BASE_URL to the live domain once the site is published, e.g. https://yuantung.example -->
+<urlset xmlns="http://www.sitemap.org/schemas/sitemap/0.9">
+  <url><loc>/</loc><priority>1.0</priority></url>
+  <url><loc>/menu</loc><priority>0.9</priority></url>
+  <url><loc>/popular-dishes</loc><priority>0.8</priority></url>
+  <url><loc>/about</loc><priority>0.7</priority></url>
+  <url><loc>/gallery</loc><priority>0.6</priority></url>
+  <url><loc>/reviews</loc><priority>0.7</priority></url>
+  <url><loc>/reservations</loc><priority>0.8</priority></url>
+  <url><loc>/contact</loc><priority>0.8</priority></url>
+</urlset>
