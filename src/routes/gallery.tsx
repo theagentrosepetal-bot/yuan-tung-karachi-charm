@@ -79,12 +79,12 @@ function GalleryPage() {
         </p>
       </PageHeader>
 
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
+      <div className="mx-auto max-w-7xl px-5 py-16 sm:px-6">
         <ul className="grid auto-rows-[220px] gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {shots.map((shot) => (
             <li
               key={shot.alt}
-              className={`group relative overflow-hidden border border-border ${
+              className={`group relative overflow-hidden rounded-2xl border border-border shadow-soft ${
                 shot.tall ? "row-span-2" : ""
               }`}
             >
@@ -94,9 +94,9 @@ function GalleryPage() {
                 loading="lazy"
                 width={shot.w}
                 height={shot.h}
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
+                className="h-full w-full rounded-2xl object-cover transition-transform duration-500 group-hover:scale-[1.05]"
               />
-              <span className="absolute bottom-0 left-0 right-0 bg-ink/70 px-4 py-2 text-xs tracking-[0.16em] text-ink-foreground uppercase opacity-0 transition-opacity group-hover:opacity-100">
+              <span className="absolute bottom-0 left-0 right-0 bg-ink/70 px-5 py-2 text-xs tracking-[0.16em] text-ink-foreground uppercase opacity-0 transition-opacity group-hover:opacity-100">
                 {shot.group}
               </span>
             </li>

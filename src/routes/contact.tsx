@@ -45,7 +45,7 @@ function ContactPage() {
         </p>
       </PageHeader>
 
-      <div className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-2">
+      <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-6 lg:grid-cols-2">
         <div>
           <h2 className="font-display text-3xl">Yuan Tung Restaurant</h2>
           <span className="mt-4 rule-gold" aria-hidden="true" />
@@ -96,14 +96,14 @@ function ContactPage() {
 
         <div>
           {/* Map section — replace with an embedded map when available */}
-          <div className="relative overflow-hidden border border-border">
+          <div className="relative overflow-hidden rounded-2xl border border-border shadow-soft">
             <img
               src={exterior}
               alt="The restaurant frontage on Tariq Road"
               loading="lazy"
               width={1536}
               height={1024}
-              className="h-72 w-full object-cover sm:h-96"
+              className="h-72 w-full rounded-2xl object-cover sm:h-96"
             />
             <div className="absolute inset-0 bg-ink/45" aria-hidden="true" />
             <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 p-6 text-center text-ink-foreground">

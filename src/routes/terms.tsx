@@ -21,7 +21,7 @@ export const Route = createFileRoute("/terms")({
   component: () => (
     <>
       <PageHeader eyebrow="Legal" title="Terms of Use" />
-      <div className="mx-auto max-w-3xl space-y-4 px-4 py-16 text-muted-foreground sm:px-6">
+      <div className="mx-auto max-w-3xl space-y-4 px-5 py-16 text-muted-foreground sm:px-6">
         <p>
           Placeholder page. Menu items, prices and availability shown on this site are indicative and
           may change without notice.

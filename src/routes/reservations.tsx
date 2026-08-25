@@ -43,7 +43,7 @@ function ReservationsPage() {
         </p>
       </PageHeader>
 
-      <div className="mx-auto grid max-w-6xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-[minmax(0,1fr)_320px]">
+      <div className="mx-auto grid max-w-6xl gap-12 px-5 py-16 sm:px-6 lg:grid-cols-[minmax(0,1fr)_320px]">
         <section aria-labelledby="form-heading" className="border border-border bg-card p-6 sm:p-10">
           <h2 id="form-heading" className="font-display text-2xl">
             Reservation request

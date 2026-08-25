@@ -21,7 +21,7 @@ export const Route = createFileRoute("/privacy")({
   component: () => (
     <>
       <PageHeader eyebrow="Legal" title="Privacy Policy" />
-      <div className="mx-auto max-w-3xl space-y-4 px-4 py-16 text-muted-foreground sm:px-6">
+      <div className="mx-auto max-w-3xl space-y-4 px-5 py-16 text-muted-foreground sm:px-6">
         <p>
           Placeholder page. Reservation requests submitted through this website are not stored or
           transmitted at present.

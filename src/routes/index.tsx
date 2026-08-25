@@ -44,10 +44,10 @@ function Home() {
           alt="The Yuan Tung dining room set for the evening"
           width={1920}
           height={1280}
-          className="absolute inset-0 -z-10 h-full w-full object-cover"
+          className="absolute inset-0 -z-10 h-full w-full rounded-2xl object-cover"
         />
         <div className="absolute inset-0 -z-10 bg-ink/72" aria-hidden="true" />
-        <div className="mx-auto max-w-5xl px-4 py-24 text-center text-ink-foreground sm:px-6 lg:py-36">
+        <div className="mx-auto max-w-5xl px-5 py-24 text-center text-ink-foreground sm:px-6 lg:py-36">
           <p className="eyebrow text-gold">Tariq Road · P.E.C.H.S. · Karachi</p>
           <h1 className="mt-6 font-display text-5xl leading-[1.05] sm:text-6xl lg:text-7xl">
             Yuan Tung Restaurant
@@ -93,7 +93,7 @@ function Home() {
 
       {/* RATING STRIP */}
       <section className="border-b border-border bg-secondary">
-        <div className="mx-auto flex max-w-7xl flex-col items-center gap-3 px-4 py-5 text-center text-sm sm:flex-row sm:justify-between sm:px-6 sm:text-left">
+        <div className="mx-auto flex max-w-7xl flex-col items-center gap-3 px-5 py-5 text-center text-sm sm:flex-row sm:justify-between sm:px-6 sm:text-left">
           <p className="flex items-center gap-2">
             <Star className="h-4 w-4 fill-gold text-gold" aria-hidden="true" />
             <span className="font-medium">
@@ -109,7 +109,7 @@ function Home() {
       </section>
 
       {/* INTRODUCTION */}
-      <section className="mx-auto grid max-w-7xl gap-12 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:items-center">
+      <section className="mx-auto grid max-w-7xl gap-12 px-5 section-y sm:px-6 lg:grid-cols-2 lg:items-center">
         <div className="order-2 lg:order-1">
           <SectionHeading
             align="left"
@@ -138,7 +138,7 @@ function Home() {
             loading="lazy"
             width={1024}
             height={1280}
-            className="row-span-2 h-full w-full object-cover"
+            className="row-span-2 h-full w-full rounded-2xl object-cover"
           />
           <img
             src={hotpot}
@@ -146,7 +146,7 @@ function Home() {
             loading="lazy"
             width={1280}
             height={960}
-            className="h-full w-full object-cover"
+            className="h-full w-full rounded-2xl object-cover"
           />
           <img
             src={squid}
@@ -154,14 +154,14 @@ function Home() {
             loading="lazy"
             width={1024}
             height={1024}
-            className="h-full w-full object-cover"
+            className="h-full w-full rounded-2xl object-cover"
           />
         </div>
       </section>
 
       {/* FEATURED DISHES */}
-      <section className="bg-ink py-20 text-ink-foreground">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+      <section className="bg-ink-gradient section-y text-ink-foreground">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6">
           <div className="mx-auto max-w-2xl text-center">
             <p className="eyebrow text-gold">Most talked about</p>
             <h2 className="mt-3 font-display text-3xl sm:text-4xl">Featured Dishes</h2>
@@ -182,7 +182,7 @@ function Home() {
                     loading="lazy"
                     width={1024}
                     height={1024}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
+                    className="h-full w-full rounded-2xl object-cover transition-transform duration-500 group-hover:scale-[1.05]"
                   />
                 </div>
                 <h3 className="mt-5 font-display text-xl">{dish.name}</h3>
@@ -200,7 +200,7 @@ function Home() {
       </section>
 
       {/* REVIEWS */}
-      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
+      <section className="mx-auto max-w-7xl px-5 section-y sm:px-6">
         <SectionHeading
           eyebrow={`${restaurant.rating} / 5 · ${restaurant.reviewCount.toLocaleString("en-US")} Google reviews`}
           title="What guests say"
@@ -209,7 +209,7 @@ function Home() {
         <ul className="mt-14 grid gap-6 md:grid-cols-3">
           {reviews.slice(0, 3).map((r) => (
             <li key={r.author}>
-              <figure className="flex h-full flex-col border border-border bg-card p-7 transition-colors hover:border-gold">
+              <figure className="flex h-full flex-col card-elevated p-7 sm:p-8 transition-colors hover:border-gold">
                 <div className="flex gap-1" aria-hidden="true">
                   {[0, 1, 2, 3, 4].map((n) => (
                     <Star key={n} className="h-3.5 w-3.5 fill-gold text-gold" />
@@ -233,8 +233,8 @@ function Home() {
       </section>
 
       {/* ATMOSPHERE */}
-      <section className="border-y border-border bg-secondary py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+      <section className="border-y border-border bg-secondary section-y">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6">
           <SectionHeading
             eyebrow="The room"
             title="Casual, cozy and quiet"
@@ -247,14 +247,14 @@ function Home() {
               { src: hotpot, alt: "Hotpot served at the table", w: 1280, h: 960 },
               { src: interiorDetail, alt: "Lantern above a set table", w: 1024, h: 1280 },
             ].map((img) => (
-              <li key={img.alt} className="overflow-hidden border border-border">
+              <li key={img.alt} className="overflow-hidden rounded-2xl border border-border shadow-soft">
                 <img
                   src={img.src}
                   alt={img.alt}
                   loading="lazy"
                   width={img.w}
                   height={img.h}
-                  className="aspect-3/4 w-full object-cover transition-transform duration-500 hover:scale-[1.05]"
+                  className="aspect-3/4 w-full rounded-2xl object-cover transition-transform duration-500 hover:scale-[1.05]"
                 />
               </li>
             ))}
@@ -268,7 +268,7 @@ function Home() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="mx-auto max-w-5xl px-4 py-24 text-center sm:px-6">
+      <section className="mx-auto max-w-5xl px-5 section-y text-center sm:px-6">
         <p className="eyebrow">Join us for dinner</p>
         <h2 className="mt-4 font-display text-4xl sm:text-5xl">
           Reserve a table, call us, or simply drop in

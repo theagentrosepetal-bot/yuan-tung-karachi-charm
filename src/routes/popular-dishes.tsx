@@ -36,7 +36,7 @@ function PopularDishesPage() {
         </p>
       </PageHeader>
 
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
+      <div className="mx-auto max-w-7xl px-5 py-16 sm:px-6">
         <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {popularDishes.map((dish) => (
             <li key={dish.name} className="group border border-border bg-card">
@@ -47,7 +47,7 @@ function PopularDishesPage() {
                   loading="lazy"
                   width={1024}
                   height={768}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                  className="h-full w-full rounded-2xl object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                 />
               </div>
               <div className="p-6">

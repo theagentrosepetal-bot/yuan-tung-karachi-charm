@@ -42,9 +42,9 @@ function MenuPage() {
         </p>
       </PageHeader>
 
-      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6">
+      <div className="mx-auto max-w-7xl px-5 py-14 sm:px-6">
         {/* Category tabs */}
-        <nav aria-label="Menu categories" className="-mx-4 overflow-x-auto px-4 pb-2">
+        <nav aria-label="Menu categories" className="-mx-4 overflow-x-auto px-5 pb-2">
           <ul className="flex min-w-max gap-2">
             {menu.map((c) => {
               const isActive = c.id === active;
