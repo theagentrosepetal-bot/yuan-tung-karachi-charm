@@ -63,7 +63,20 @@
 }
 
 :root {
-  --radius: 0.25rem;
+  --radius: 0.875rem;
+
+  --shadow-soft: 0 1px 2px oklch(0.21 0.015 40 / 0.05), 0 8px 24px -12px oklch(0.21 0.015 40 / 0.14);
+  --shadow-lift:
+    0 2px 4px oklch(0.21 0.015 40 / 0.06), 0 18px 40px -18px oklch(0.21 0.015 40 / 0.22);
+  --gradient-ink: linear-gradient(
+    170deg,
+    oklch(0.22 0.014 40),
+    oklch(0.17 0.012 34) 55%,
+    oklch(0.2 0.02 28)
+  );
+  --gradient-cream: linear-gradient(180deg, oklch(0.985 0.01 88), oklch(0.955 0.016 84));
+
+
 
   --background: oklch(0.976 0.012 85);
   --foreground: oklch(0.21 0.015 40);
@@ -175,5 +188,99 @@
   }
   &:hover::after {
     width: 100%;
+  }
+}
+
+@layer base {
+  body {
+    line-height: 1.7;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3 {
+    line-height: 1.12;
+    letter-spacing: -0.015em;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  a,
+  button {
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease,
+      border-color 0.2s ease,
+      box-shadow 0.25s ease,
+      transform 0.2s ease,
+      opacity 0.2s ease;
+  }
+
+  :focus-visible {
+    outline: 2px solid color-mix(in oklab, var(--color-gold) 80%, transparent);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-gold) 45%, transparent);
+    color: var(--color-foreground);
+  }
+}
+
+@utility shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+
+@utility shadow-lift {
+  box-shadow: var(--shadow-lift);
+}
+
+/* Section rhythm: generous, consistent vertical breathing room */
+@utility section-y {
+  padding-block: 4.5rem;
+  @media (min-width: 640px) {
+    padding-block: 6rem;
+  }
+  @media (min-width: 1024px) {
+    padding-block: 7.5rem;
+  }
+}
+
+@utility bg-ink-gradient {
+  background: var(--gradient-ink);
+}
+
+@utility bg-cream-gradient {
+  background: var(--gradient-cream);
+}
+
+/* Elevated content card with a soft hover lift */
+@utility card-elevated {
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-card);
+  box-shadow: var(--shadow-soft);
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease,
+    border-color 0.3s ease;
+  &:hover {
+    box-shadow: var(--shadow-lift);
+    border-color: color-mix(in oklab, var(--color-gold) 55%, var(--color-border));
+    transform: translateY(-3px);
+  }
+}
+
+@utility media-frame {
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  & img {
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  &:hover img {
+    transform: scale(1.05);
   }
 }

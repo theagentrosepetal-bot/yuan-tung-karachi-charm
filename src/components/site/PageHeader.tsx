@@ -11,7 +11,7 @@ export function PageHeader({
 }) {
   return (
     <section className="border-b border-border bg-ink text-ink-foreground">
-      <div className="mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 lg:py-24">
+      <div className="mx-auto max-w-4xl px-5 section-y text-center sm:px-6">
         <p className="eyebrow text-gold">{eyebrow}</p>
         <h1 className="mt-4 font-display text-4xl leading-tight sm:text-5xl lg:text-6xl">{title}</h1>
         <span className="mx-auto mt-6 rule-gold" aria-hidden="true" />

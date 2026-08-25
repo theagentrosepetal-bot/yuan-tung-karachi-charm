@@ -7,7 +7,7 @@ import { restaurant } from "@/data/restaurant";
 export function SiteFooter() {
   return (
     <footer className="mt-24 bg-sidebar text-sidebar-foreground">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-4">
+      <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:px-6 md:grid-cols-4">
         <div className="md:col-span-2">
           <h2 className="font-display text-2xl">Yuan Tung Restaurant</h2>
           <p className="mt-1 text-sm text-sidebar-foreground/70">
@@ -79,7 +79,7 @@ export function SiteFooter() {
       </div>
 
       <div className="border-t border-sidebar-border">
-        <div className="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-5 text-xs text-sidebar-foreground/60 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+        <div className="mx-auto flex max-w-7xl flex-col gap-2 px-5 py-5 text-xs text-sidebar-foreground/60 sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <p>© {new Date().getFullYear()} Yuan Tung Restaurant, Karachi. All rights reserved.</p>
           <p className="flex gap-4">
             <Link to="/privacy" className="hover:text-gold">

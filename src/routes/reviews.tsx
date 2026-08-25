@@ -63,7 +63,7 @@ function ReviewCard({
   theme: string;
 }) {
   return (
-    <figure className="flex h-full flex-col border border-border bg-card p-7 transition-colors hover:border-gold">
+    <figure className="flex h-full flex-col card-elevated p-7 sm:p-8 transition-colors hover:border-gold">
       <Quote className="h-5 w-5 text-gold" aria-hidden="true" />
       <blockquote className="mt-4 flex-1 font-display text-lg leading-relaxed">
         “{quote}”
@@ -86,7 +86,7 @@ function ReviewsPage() {
         </p>
       </PageHeader>
 
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
+      <div className="mx-auto max-w-7xl px-5 py-16 sm:px-6">
         <div className="grid gap-10 lg:grid-cols-[320px_minmax(0,1fr)]">
           <div className="space-y-6">
             <RatingSummary />
@@ -96,7 +96,7 @@ function ReviewsPage() {
                 {reviewThemes.map((t) => (
                   <li
                     key={t}
-                    className="rounded-sm border border-border bg-secondary px-3 py-1 text-xs text-secondary-foreground"
+                    className="rounded-full border border-border bg-secondary px-3 py-1 text-xs text-secondary-foreground"
                   >
                     {t}
                   </li>

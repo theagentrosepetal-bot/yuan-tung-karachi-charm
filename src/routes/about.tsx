@@ -39,7 +39,7 @@ function AboutPage() {
         </p>
       </PageHeader>
 
-      <section className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:items-center">
+      <section className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-6 lg:grid-cols-2 lg:items-center">
         <div>
           <SectionHeading
             align="left"
@@ -71,7 +71,7 @@ function AboutPage() {
             loading="lazy"
             width={1024}
             height={1280}
-            className="col-span-1 row-span-2 h-full w-full object-cover"
+            className="col-span-1 row-span-2 h-full w-full rounded-2xl object-cover"
           />
           <img
             src={hotpot}
@@ -79,7 +79,7 @@ function AboutPage() {
             loading="lazy"
             width={1280}
             height={960}
-            className="h-full w-full object-cover"
+            className="h-full w-full rounded-2xl object-cover"
           />
           <img
             src={chowMein}
@@ -87,13 +87,13 @@ function AboutPage() {
             loading="lazy"
             width={1024}
             height={1024}
-            className="h-full w-full object-cover"
+            className="h-full w-full rounded-2xl object-cover"
           />
         </div>
       </section>
 
       {/* Editable placeholder for the owner's official history */}
-      <section className="mx-auto max-w-4xl px-4 pb-16 sm:px-6">
+      <section className="mx-auto max-w-4xl px-5 pb-16 sm:px-6">
         <div className="border border-dashed border-gold bg-card p-8 sm:p-10">
           <p className="eyebrow">Our history — to be added</p>
           <h2 className="mt-3 font-display text-2xl sm:text-3xl">
@@ -110,7 +110,7 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 pb-8 sm:px-6">
+      <section className="mx-auto max-w-7xl px-5 pb-8 sm:px-6">
         <SectionHeading
           eyebrow="Gallery"
           title="A look around"
@@ -129,7 +129,7 @@ function AboutPage() {
                 loading="lazy"
                 width={img.w}
                 height={img.h}
-                className="aspect-4/3 w-full object-cover transition-transform duration-500 hover:scale-[1.03]"
+                className="aspect-4/3 w-full rounded-2xl object-cover transition-transform duration-500 hover:scale-[1.03]"
               />
             </li>
           ))}

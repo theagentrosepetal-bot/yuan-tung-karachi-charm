@@ -43,8 +43,8 @@ function ReservationsPage() {
         </p>
       </PageHeader>
 
-      <div className="mx-auto grid max-w-6xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-[minmax(0,1fr)_320px]">
-        <section aria-labelledby="form-heading" className="border border-border bg-card p-6 sm:p-10">
+      <div className="mx-auto grid max-w-6xl gap-12 px-5 py-16 sm:px-6 lg:grid-cols-[minmax(0,1fr)_320px]">
+        <section aria-labelledby="form-heading" className="card-elevated p-6 sm:p-10">
           <h2 id="form-heading" className="font-display text-2xl">
             Reservation request
           </h2>
@@ -110,7 +110,7 @@ function ReservationsPage() {
         </section>
 
         <aside className="space-y-6">
-          <div className="border border-border bg-card p-6">
+          <div className="card-elevated p-6 sm:p-7">
             <h2 className="font-display text-xl">Good to know</h2>
             <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
               <li>Dinner reservations recommended.</li>
@@ -120,7 +120,7 @@ function ReservationsPage() {
               <li>{restaurant.hoursNote}</li>
             </ul>
           </div>
-          <div className="border border-border bg-ink p-6 text-ink-foreground">
+          <div className="rounded-2xl border border-border bg-ink-gradient p-6 shadow-soft text-ink-foreground">
             <h2 className="font-display text-xl">Prefer to call?</h2>
             <p className="mt-2 text-sm text-ink-foreground/75">
               The quickest way to confirm a table is by phone.

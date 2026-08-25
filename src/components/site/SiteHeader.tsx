@@ -19,12 +19,12 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border/70 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
-      <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-4 py-3 sm:px-6 lg:py-4">
+    <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 shadow-soft backdrop-blur supports-[backdrop-filter]:bg-background/80">
+      <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-3 sm:px-6 lg:py-4">
         <Link to="/" className="flex min-w-0 items-center gap-3" aria-label={restaurant.name}>
           <span
             aria-hidden="true"
-            className="grid h-10 w-10 shrink-0 place-items-center rounded-sm bg-primary font-display text-lg text-primary-foreground panel-frame"
+            className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-primary shadow-soft font-display text-lg text-primary-foreground panel-frame"
           >
             YT
           </span>
@@ -65,7 +65,7 @@ export function SiteHeader() {
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            className="grid h-10 w-10 place-items-center rounded-sm border border-border lg:hidden"
+            className="grid h-10 w-10 place-items-center rounded-xl border border-border bg-card/60 shadow-soft transition-colors hover:border-gold lg:hidden"
             aria-expanded={open}
             aria-controls="mobile-nav"
             aria-label={open ? "Close menu" : "Open menu"}
@@ -81,13 +81,13 @@ export function SiteHeader() {
           aria-label="Mobile"
           className="border-t border-border bg-background lg:hidden"
         >
-          <ul className="mx-auto max-w-7xl px-4 py-2 sm:px-6">
+          <ul className="mx-auto max-w-7xl px-5 py-2 sm:px-6">
             {[...nav, { to: "/reservations", label: "Reservations" } as const].map((item) => (
               <li key={item.to}>
                 <Link
                   to={item.to}
                   onClick={() => setOpen(false)}
-                  className="block border-b border-border/60 py-3 text-sm"
+                  className="block rounded-lg border-b border-border/50 px-1 py-3.5 text-sm transition-colors hover:text-primary"
                   activeProps={{ className: "text-primary" }}
                   activeOptions={{ exact: item.to === "/" }}
                 >

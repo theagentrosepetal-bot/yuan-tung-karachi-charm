@@ -30,7 +30,7 @@ export function OpeningHours({ variant = "card" }: { variant?: Variant }) {
   }
 
   return (
-    <div className="border border-border bg-card p-6">
+    <div className="card-elevated p-6 sm:p-7">
       <div className="flex items-center gap-2">
         <Clock className="h-5 w-5 text-gold" aria-hidden="true" />
         <h2 className="font-display text-xl">Opening Hours</h2>
