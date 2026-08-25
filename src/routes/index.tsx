@@ -44,7 +44,7 @@ function Home() {
           alt="The Yuan Tung dining room set for the evening"
           width={1920}
           height={1280}
-          className="absolute inset-0 -z-10 h-full w-full rounded-2xl object-cover"
+          className="absolute inset-0 -z-10 h-full w-full object-cover"
         />
         <div className="absolute inset-0 -z-10 bg-ink/72" aria-hidden="true" />
         <div className="mx-auto max-w-5xl px-5 py-24 text-center text-ink-foreground sm:px-6 lg:py-36">
