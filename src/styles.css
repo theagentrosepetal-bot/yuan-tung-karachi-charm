@@ -190,3 +190,97 @@
     width: 100%;
   }
 }
+
+@layer base {
+  body {
+    line-height: 1.7;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3 {
+    line-height: 1.12;
+    letter-spacing: -0.015em;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  a,
+  button {
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease,
+      border-color 0.2s ease,
+      box-shadow 0.25s ease,
+      transform 0.2s ease,
+      opacity 0.2s ease;
+  }
+
+  :focus-visible {
+    outline: 2px solid color-mix(in oklab, var(--color-gold) 80%, transparent);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-gold) 45%, transparent);
+    color: var(--color-foreground);
+  }
+}
+
+@utility shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+
+@utility shadow-lift {
+  box-shadow: var(--shadow-lift);
+}
+
+/* Section rhythm: generous, consistent vertical breathing room */
+@utility section-y {
+  padding-block: 4.5rem;
+  @media (min-width: 640px) {
+    padding-block: 6rem;
+  }
+  @media (min-width: 1024px) {
+    padding-block: 7.5rem;
+  }
+}
+
+@utility bg-ink-gradient {
+  background: var(--gradient-ink);
+}
+
+@utility bg-cream-gradient {
+  background: var(--gradient-cream);
+}
+
+/* Elevated content card with a soft hover lift */
+@utility card-elevated {
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-card);
+  box-shadow: var(--shadow-soft);
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease,
+    border-color 0.3s ease;
+  &:hover {
+    box-shadow: var(--shadow-lift);
+    border-color: color-mix(in oklab, var(--color-gold) 55%, var(--color-border));
+    transform: translateY(-3px);
+  }
+}
+
+@utility media-frame {
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  & img {
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  &:hover img {
+    transform: scale(1.05);
+  }
+}
