@@ -92,8 +92,8 @@ function Home() {
       </section>
 
       {/* RATING STRIP */}
-      <section className="border-b border-border bg-secondary">
-        <div className="mx-auto flex max-w-7xl flex-col items-center gap-3 px-5 py-5 text-center text-sm sm:flex-row sm:justify-between sm:px-6 sm:text-left">
+      <section className="border-b border-border bg-cream-gradient">
+        <div className="mx-auto flex max-w-7xl flex-col items-center gap-3 px-5 py-6 text-center text-sm sm:flex-row sm:justify-between sm:px-6 sm:text-left">
           <p className="flex items-center gap-2">
             <Star className="h-4 w-4 fill-gold text-gold" aria-hidden="true" />
             <span className="font-medium">
@@ -172,17 +172,17 @@ function Home() {
             </p>
           </div>
 
-          <ul className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <ul className="mt-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
             {featuredDishes.map((dish) => (
               <li key={dish.name} className="group">
-                <div className="aspect-square overflow-hidden">
+                <div className="media-frame aspect-square shadow-soft">
                   <img
                     src={dish.image}
                     alt={dish.name}
                     loading="lazy"
                     width={1024}
                     height={1024}
-                    className="h-full w-full rounded-2xl object-cover transition-transform duration-500 group-hover:scale-[1.05]"
+                    className="h-full w-full object-cover"
                   />
                 </div>
                 <h3 className="mt-5 font-display text-xl">{dish.name}</h3>
@@ -206,7 +206,7 @@ function Home() {
           title="What guests say"
           intro="Short excerpts from public reviews, kept as written."
         />
-        <ul className="mt-14 grid gap-6 md:grid-cols-3">
+        <ul className="mt-16 grid gap-7 md:grid-cols-3">
           {reviews.slice(0, 3).map((r) => (
             <li key={r.author}>
               <figure className="flex h-full flex-col card-elevated p-7 sm:p-8 transition-colors hover:border-gold">
