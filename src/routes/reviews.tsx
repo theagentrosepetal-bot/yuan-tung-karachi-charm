@@ -96,7 +96,7 @@ function ReviewsPage() {
                 {reviewThemes.map((t) => (
                   <li
                     key={t}
-                    className="rounded-sm border border-border bg-secondary px-3 py-1 text-xs text-secondary-foreground"
+                    className="rounded-full border border-border bg-secondary px-3 py-1 text-xs text-secondary-foreground"
                   >
                     {t}
                   </li>

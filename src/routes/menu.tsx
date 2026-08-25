@@ -54,7 +54,7 @@ function MenuPage() {
                     type="button"
                     onClick={() => setActive(c.id)}
                     aria-current={isActive ? "true" : undefined}
-                    className={`rounded-sm border px-4 py-2 text-sm whitespace-nowrap transition-colors ${
+                    className={`rounded-full border px-4 py-2 text-sm whitespace-nowrap shadow-soft transition-all duration-200 hover:-translate-y-0.5 ${
                       isActive
                         ? "border-primary bg-primary text-primary-foreground"
                         : "border-border bg-card text-foreground/80 hover:border-gold hover:text-foreground"
@@ -85,7 +85,7 @@ function MenuPage() {
                   <h3 className="font-display text-xl leading-snug">
                     {item.name}
                     {item.popular && (
-                      <span className="ml-2 inline-block translate-y-[-2px] rounded-sm border border-gold px-2 py-0.5 align-middle text-[0.65rem] tracking-[0.14em] text-primary uppercase">
+                      <span className="ml-2 inline-block translate-y-[-2px] rounded-full border border-gold px-2 py-0.5 align-middle text-[0.65rem] tracking-[0.14em] text-primary uppercase">
                         Popular
                       </span>
                     )}

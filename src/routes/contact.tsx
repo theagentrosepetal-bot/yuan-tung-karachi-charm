@@ -81,7 +81,7 @@ function ContactPage() {
 
           <ul className="mt-12 grid gap-5 sm:grid-cols-2">
             {services.map((s) => (
-              <li key={s.label} className="border border-border bg-card p-5">
+              <li key={s.label} className="card-elevated p-5 sm:p-6">
                 <s.icon className="h-5 w-5 text-gold" aria-hidden="true" />
                 <h3 className="mt-3 font-display text-lg">{s.label}</h3>
                 <p className="mt-1 text-sm text-muted-foreground">{s.note}</p>
@@ -120,13 +120,13 @@ function ContactPage() {
             </div>
           </div>
 
-          <div className="mt-6 border border-border bg-card p-6">
+          <div className="mt-6 card-elevated p-6 sm:p-7">
             <h2 className="font-display text-xl">Atmosphere</h2>
             <ul className="mt-4 flex flex-wrap gap-2">
               {restaurant.atmosphere.map((a) => (
                 <li
                   key={a}
-                  className="rounded-sm border border-border bg-secondary px-3 py-1 text-xs text-secondary-foreground"
+                  className="rounded-full border border-border bg-secondary px-3 py-1 text-xs text-secondary-foreground"
                 >
                   {a}
                 </li>
